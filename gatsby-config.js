@@ -18,6 +18,23 @@ module.exports = {
         path: `${__dirname}/content/assets`,
       },
     },
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-less",
+      options: {
+        lessOptions: {
+          modifyVars: { //direct child node of lessOptions
+            "primary-color": "#002512", //your preferred color
+          },
+          javascriptEnabled: true, //direct child node of lessOptions
+        },
+      },
+    },
 
     /**
      * The following two plugins are required if you want to use Gatsby image
@@ -26,7 +43,6 @@ module.exports = {
      */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-antd`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
@@ -41,6 +57,22 @@ module.exports = {
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@assets": "src/assets",
+          "@components": "src/components",
+          "@pages": "src/pages",
+          "@templates": "src/templates",
+        },
+        extensions: [
+          "js",
+          "jsx",
+        ],
+      }
     },
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet

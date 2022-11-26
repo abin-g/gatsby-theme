@@ -1,9 +1,6 @@
 const path = require(`path`)
 const chunk = require(`lodash/chunk`)
 
-// This is a simple debugging tool
-// dd() will prettily dump to the terminal and kill the process
-// const { dd } = require(`dumper.js`)
 
 /**
  * exports.createPages is a built-in Gatsby Node API.
@@ -88,7 +85,7 @@ async function createBlogPostArchive({ posts, gatsbyUtilities }) {
           // we want the first page to be "/" and any additional pages
           // to be numbered.
           // "/blog/2" for example
-          return page === 1 ? `/` : `/blog/${page}`
+          return page === 1 ? `/blog` : `blog/${page}`
         }
 
         return null
