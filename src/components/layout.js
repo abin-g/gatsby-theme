@@ -10,14 +10,8 @@ const Layouts = ({ children }) => {
   return (
     <Layout>
       <Headers />
-      <Content
-        style={{
-          padding: '0 50px',
-        }}
-      >
-        <div className="site-layout-content">
-          {children}
-        </div>
+      <Content>
+        {children}
       </Content>
       <Footer />
     </Layout >

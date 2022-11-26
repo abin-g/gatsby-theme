@@ -7,11 +7,16 @@
     display: flex;
     align-items: center;
     height: 80px;
+    z-index: 2 !important;
     width: 100%;
     padding: 3.2rem 3rem;
     background-color: #2E255C;
     color: rgb(255, 255, 255);
     box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+
+.slick-dots-right {
+    z-index: 1 !important;
 }
 
 .brand-name {
@@ -73,4 +78,24 @@
 
 .site-layout-content {
     margin-top: 10px;
+}
+
+.footer-submenu {
+    background: black !important;
+    color: white !important;
+    font-family: "Poppins", sans-serif !important;
+
+    h5 {
+        color: white !important;
+        font-family: "Poppins", sans-serif !important;
+    }
+
+    .footer-submenuright-section {
+        margin-top: -7px;
+        text-align: right;
+    }
+
+    .footer-links {
+        font-size: 15px;
+    }
 }

@@ -9,7 +9,7 @@ export default function Headers() {
     const [isNavExpanded, setIsNavExpanded] = React.useState(false);
 
     return (
-        <nav className="navigation">
+        <nav className="navigation" style={{ position: "sticky", top: "0" }}>
             <Link to="/" className="brand-name">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@ export default function Headers() {
                     </li>
                     <li>
                         <Button type="dashed" className='menu-cta'>
-                            Book Appointment
+                            Online Verification
                         </Button>
                     </li>
                     <li>
