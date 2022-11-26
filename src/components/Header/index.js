@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from "gatsby"
-import { Button, Tooltip } from 'antd';
-import { SearchOutlined, MenuOutlined } from '@ant-design/icons';
+import { Button, Tooltip, Modal } from 'antd';
+import { SearchOutlined, QrcodeOutlined } from '@ant-design/icons';
 
 
 export default function Headers() {
 
     const [isNavExpanded, setIsNavExpanded] = React.useState(false);
+    const [modalOpen, setModalOpen] = React.useState(false);
 
     return (
         <nav className="navigation" style={{ position: "sticky", top: "0" }}>
@@ -170,37 +171,44 @@ export default function Headers() {
                         <Link to="/blog">About us</Link>
                     </li>
                     <li>
-                        <Link to="/blog">Why Spirulina</Link>
+                        <Link to="/blog">Course Offered</Link>
                     </li>
                     <li>
-                        <Link to="/blog">Benificts</Link>
+                        <Link to="/blog">Recognization</Link>
                     </li>
                     <li>
-                        <Link to="/blog">Our Products</Link>
+                        <Link to="/gallery">Gallery</Link>
                     </li>
                     <li>
-                        <Link to="/blog">News</Link>
-                    </li>
-                    <li>
-                        <Link to="/blog">Certificates</Link>
+                        <Link to="/news">News</Link>
                     </li>
                     <li>
                         <Tooltip title="Search">
                             <Button shape="circle" icon={<SearchOutlined />} />
                         </Tooltip>
                     </li>
-                    <li>
+                    <li><Link to="/verification">
                         <Button type="dashed" className='menu-cta'>
                             Online Verification
                         </Button>
+                    </Link>
                     </li>
                     <li>
-                        <Tooltip title="All Menu">
-                            <MenuOutlined style={{ fontSize: '30px' }} />
+                        <Tooltip onClick={() => setModalOpen(true)} title="Donate from here">
+                            <QrcodeOutlined style={{ fontSize: '30px' }} />
                         </Tooltip>
                     </li>
                 </ul>
             </div>
+            <Modal
+                title="Scan the QR Code to donate"
+                centered
+                open={modalOpen}
+                onOk={() => setModalOpen(false)}
+                onCancel={() => setModalOpen(false)}
+            >
+                <img width="100%" src="https://www.investopedia.com/thmb/hJrIBjjMBGfx0oa_bHAgZ9AWyn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png" />
+            </Modal>
         </nav>
     );
 }
