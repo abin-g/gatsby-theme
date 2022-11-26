@@ -1,15 +1,15 @@
 {
-  "name": "gatsby-starter-wordpress-blog",
+  "name": "evergreen",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Evergreen Website Production from Artech Solutions",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com> and Tyler Barnes <tylerdbarnes@gmail.com>",
+  "author": "Abin G <abin@arttechsolutions.in>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "",
   "keywords": [
-    "gatsby"
+    "evergreen"
   ],
   "license": "0BSD",
   "main": "n/a",
@@ -28,10 +28,12 @@
   },
   "dependencies": {
     "gatsby": "^4.0.0",
+    "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-manifest": "^4.0.0",
     "gatsby-plugin-offline": "^5.0.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
+    "gatsby-plugin-sass": "^6.2.0",
     "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-source-wordpress": "^6.0.0",
@@ -42,6 +44,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^5.2.1",
+    "sass": "^1.56.1",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13"
   },
