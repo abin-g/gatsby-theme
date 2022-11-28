@@ -48,6 +48,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^4.6.0",
     "sass": "^1.56.1",
+    "swiper": "^8.4.5",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13"
   },
