@@ -1,6 +1,11 @@
 import React from "react";
-import { Carousel, Button, Tooltip } from 'antd';
+import { Button, Tooltip } from 'antd';
+import { Image, Col, Row } from 'antd';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from "swiper";
 import { BsFillCursorFill, BsFillHandIndexThumbFill, BsFillTelephoneForwardFill, BsWhatsapp, BsUiChecksGrid } from "react-icons/bs";
+
+
 const contentStyle = {
     height: '500px',
     color: '#fff',
@@ -15,20 +20,31 @@ function Slider() {
 
     return (
         <>
-            <Carousel dotPosition="right">
-                <div>
-                    <img style={contentStyle} src="https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg" />
-                </div>
-                <div>
-                    <img style={contentStyle} src="https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg" />
-                </div>
-                <div>
-                    <img style={contentStyle} src="https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg" />
-                </div>
-                <div>
-                    <img style={contentStyle} src="https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg" />
-                </div>
-            </Carousel>
+            <Swiper spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
+                className="mySwiper">
+                <SwiperSlide className="slider-swap" style={{ backgroundImage: `linear-gradient(90deg, #000, #141414 10%, rgba(83, 100, 141, 0)),url("https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/fbd6fa099e205c45454a0f9465138665d7e263044c30ef3dbc4cae67cad5b247._V_SX2160_.jpg")` }}>
+                    <div className="slider-text-area" style={{ height: '500px' }}>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-swap" style={{ backgroundImage: `linear-gradient(90deg, #000, #141414 10%, rgba(83, 100, 141, 0)),url("https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/fbd6fa099e205c45454a0f9465138665d7e263044c30ef3dbc4cae67cad5b247._V_SX2160_.jpg")` }}>
+                    <div className="slider-text-area" style={{ height: '500px' }}>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+                    </div>
+                </SwiperSlide>
+
+            </Swiper>
+
             <div className="icon-bar">
                 <div className="apply-cta">
                     <Tooltip title="Apply Online">

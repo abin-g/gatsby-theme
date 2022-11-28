@@ -115,6 +115,7 @@
 .icon-bar {
     position: fixed;
     top: 50%;
+    z-index: 1 !important;
     right: 50px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -124,5 +125,98 @@
         width: 50px !important;
         height: 50px !important;
         margin-bottom: 10px;
+        animation: fadeIn ease 5s !important;
+        -webkit-animation: fadeIn ease 5s !important;
+        -moz-animation: fadeIn ease 5s !important;
+        -o-animation: fadeIn ease 5s !important;
+        -ms-animation: fadeIn ease 5s !important;
     }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.slider-swap {
+    padding: 100px 0 50px;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 90vh;
+    position: relative;
+
+    .slider-text-area {
+
+        h1 {
+            color: white;
+            margin-right: 50px;
+            margin-left: 50px;
+            text-transform: uppercase;
+            padding-top: 320px;
+            font-family: "Poppins", sans-serif;
+            line-height: 2;
+            letter-spacing: 0.02em;
+            filter: drop-shadow(rgba(0, 0, 0, 0.4) 2px 3px 3px);
+            transform: translate3d(-10px, 0px, 0px);
+            transition-duration: 0ms;
+            font-size: 25px;
+        }
+
+    }
+
+}
+
+.swiper-button-prev {
+    color: white !important;
+}
+
+.swiper-button-next {
+    color: white !important;
 }
