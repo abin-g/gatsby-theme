@@ -125,11 +125,11 @@
         width: 50px !important;
         height: 50px !important;
         margin-bottom: 10px;
-        animation: fadeIn ease 5s !important;
-        -webkit-animation: fadeIn ease 5s !important;
-        -moz-animation: fadeIn ease 5s !important;
-        -o-animation: fadeIn ease 5s !important;
-        -ms-animation: fadeIn ease 5s !important;
+        animation: fadeIn ease 10s !important;
+        -webkit-animation: fadeIn ease 10s !important;
+        -moz-animation: fadeIn ease 10s !important;
+        -o-animation: fadeIn ease 10s !important;
+        -ms-animation: fadeIn ease 10s !important;
     }
 
     @keyframes fadeIn {
@@ -219,4 +219,66 @@
 
 .swiper-button-next {
     color: white !important;
+}
+
+.course-section {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 100% !important;
+    height: 400px;
+    text-align: left;
+    position: relative;
+
+    h2 {
+        position: absolute;
+        margin: 20px;
+        color: white;
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        bottom: 10px;
+        left: 0;
+    }
+}
+
+.course-rightsection {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 25% !important;
+    height: 200px;
+    text-align: left;
+    position: relative;
+
+    .courselogo {
+        fill: white;
+        float: right;
+        margin-right: 30px;
+
+    }
+
+    h2 {
+        position: absolute;
+        margin: 20px;
+        color: white;
+        font-size: 20px;
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 900;
+        text-transform: uppercase;
+        bottom: 30px;
+        right: 0;
+    }
+
+    p {
+        position: absolute;
+        margin: 20px;
+        color: white;
+        font-size: 10px;
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 900;
+        text-transform: uppercase;
+        bottom: 5px;
+        right: 0;
+    }
 }

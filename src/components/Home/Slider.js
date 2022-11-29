@@ -1,9 +1,14 @@
 import React from "react";
 import { Button, Tooltip } from 'antd';
-import { Image, Col, Row } from 'antd';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from "swiper";
-import { BsFillCursorFill, BsFillHandIndexThumbFill, BsFillTelephoneForwardFill, BsWhatsapp, BsUiChecksGrid } from "react-icons/bs";
+import {
+    BsFillCursorFill,
+    BsFillHandIndexThumbFill,
+    BsFillTelephoneForwardFill,
+    BsWhatsapp,
+    BsUiChecksGrid
+} from "react-icons/bs";
 
 
 const contentStyle = {
@@ -47,27 +52,27 @@ function Slider() {
 
             <div className="icon-bar">
                 <div className="apply-cta">
-                    <Tooltip title="Apply Online">
+                    <Tooltip placement="leftBottom" title="Apply Online">
                         <Button shape="circle" style={{ background: '#E30613' }} icon={<BsFillCursorFill fill="white" size={20} />} />
                     </Tooltip>
                 </div>
                 <div className="apply-cta">
-                    <Tooltip title="Enquir Now">
+                    <Tooltip placement="leftBottom" title="Enquir Now">
                         <Button shape="circle" style={{ background: '#F47D07' }} icon={<BsFillHandIndexThumbFill fill="white" size={20} />} />
                     </Tooltip>
                 </div>
                 <div className="apply-cta">
-                    <Tooltip title="Request a call">
+                    <Tooltip placement="leftBottom" title="Request a call">
                         <Button shape="circle" style={{ background: '#FD4F00' }} icon={<BsFillTelephoneForwardFill fill="white" size={20} />} />
                     </Tooltip>
                 </div>
                 <div className="apply-cta">
-                    <Tooltip title="Whatsapp">
+                    <Tooltip placement="leftBottom" title="Whatsapp">
                         <Button shape="circle" style={{ background: '#19A56E' }} icon={<BsWhatsapp fill="white" size={20} />} />
                     </Tooltip>
                 </div>
                 <div className="apply-cta">
-                    <Tooltip title="Events & News">
+                    <Tooltip placement="leftBottom" title="Events & News">
                         <Button shape="circle" style={{ background: '#E50159' }} icon={<BsUiChecksGrid fill="white" size={20} />} />
                     </Tooltip>
                 </div>
